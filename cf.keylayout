@@ -3,14 +3,14 @@
 
 <!--
   Clavier canadien francais pour Mac OS X
-  Version 0.10.1 (10 juin 2015)
+  Version 0.10.2 (24 juin 2015)
 
   Auteur original: Sébastien Guillemette (2004)
   Mainteneurs actuels: Jonathan Allard, Matthieu Yiptong
   <https://github.com/ergosteur/cf-keylayout>
 -->
 
-<keyboard group="0" id="5000" name="Canadien francais 0.10.1" maxout="1">
+<keyboard group="0" id="5000" name="Canadien francais 0.10.2" maxout="1">
         <layouts>
                 <layout first="0" last="0" modifiers="48" mapSet="312" />
         </layouts>
@@ -414,6 +414,7 @@
                         <key code="39" output="{" />
                         <key code="41" output="~" />
                         <key code="42" output="}" />
+                        <key code="44" action="acute" />
                         <key code="46" output="&#xb5;" />
                         <key code="48" output="&#x9;" />
                         <key code="49" output="&#xA0;" />
@@ -750,11 +751,15 @@
                 <action id="trema">
                      <when state="none" next="trema" />
                 </action>
+                <action id="acute">
+                     <when state="none" next="acute" />
+                </action>
                 <action id="a">
                      <when state="none" output="a" />
                      <when state="grave" output="&#xe0;" />
                      <when state="circumflex" output="&#xe2;" />
                      <when state="trema" output="&#xe4;" />
+                     <when state="acute" output="&#xe1;" />
                 </action>
                 <action id="c">
                      <when state="none" output="c" />
@@ -765,28 +770,35 @@
                      <when state="grave" output="&#xe8;" />
                      <when state="circumflex" output="&#xea;" />
                      <when state="trema" output="&#xeb;" />
+                     <when state="acute" output="&#xe9;" />
                 </action>
                 <action id="i">
                      <when state="none" output="i" />
+                     <when state="grave" output="&#xec;" />
                      <when state="circumflex" output="&#xee;" />
                      <when state="trema" output="&#xef;" />
+                     <when state="acute" output="&#xed;" />
                 </action>
                 <action id="o">
                      <when state="none" output="o" />
+                     <when state="grave" output="&#xf2;" />
                      <when state="circumflex" output="&#xf4;" />
                      <when state="trema" output="&#xf6;" />
+                     <when state="acute" output="&#xf3;" />
                 </action>
                 <action id="u">
                      <when state="none" output="u" />
                      <when state="grave" output="&#xf9;" />
                      <when state="circumflex" output="&#xfb;" />
                      <when state="trema" output="&#xfc;" />
+                     <when state="acute" output="&#xfa;" />
                 </action>
                 <action id="Aup">
                      <when state="none" output="A" />
                      <when state="grave" output="&#xc0;" />
                      <when state="circumflex" output="&#xc2;" />
                      <when state="trema" output="&#xc4;" />
+                     <when state="acute" output="&#xc1;" />
                 </action>
                 <action id="Cup">
                      <when state="none" output="C" />
@@ -797,22 +809,28 @@
                      <when state="grave" output="&#xc8;" />
                      <when state="circumflex" output="&#xca;" />
                      <when state="trema" output="&#xcb;" />
+                     <when state="acute" output="&#xc9;" />
                 </action>
                 <action id="Iup">
                      <when state="none" output="I" />
+                     <when state="grave" output="&#xcc;" />
                      <when state="circumflex" output="&#xce;" />
                      <when state="trema" output="&#xcf;" />
+                     <when state="acute" output="&#xcd;" />
                 </action>
                 <action id="Oup">
                      <when state="none" output="O" />
+                     <when state="grave" output="&#xd2;" />
                      <when state="circumflex" output="&#xd4;" />
                      <when state="trema" output="&#xd6;" />
+                     <when state="acute" output="&#xd3;" />
                 </action>
                 <action id="Uup">
                      <when state="none" output="U" />
                      <when state="grave" output="&#xd9;" />
                      <when state="circumflex" output="&#xdb;" />
                      <when state="trema" output="&#xdc;" />
+                     <when state="acute" output="&#xda;" />
                 </action>
         </actions>
         <terminators>
@@ -820,5 +838,6 @@
             <when state="circumflex" output="&#x5e;" />
             <when state="grave" output="&#x60;" />
             <when state="trema" output="&#xa8;" />
+            <when state="acute" output="&#xb4;" />
         </terminators>
 </keyboard>
